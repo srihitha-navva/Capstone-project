@@ -1,0 +1,61 @@
+### authorReq.http
+
+
+### Register User
+POST http://localhost:4000/auth/users
+Content-Type: application/json
+
+{
+    "firstName": "rishit",
+    "lastName":"",
+    "email":"rishit@email.com",
+    "password":"rishit",
+    "role":"AUTHOR",
+    "profileImageUrl":"https://example.com/avatars/user.png"
+}
+
+### Author Login
+POST http://localhost:4000/auth/login
+Content-Type: application/json
+
+{
+    "email":"author2@email.com",
+    "password":"author2"
+}
+
+
+### Create new article
+POST http://localhost:4000/author-api/article
+Content-Type: application/json
+
+{
+    "author":"69b3cacbde85276dfac8fef6",
+    "title":"Article 2 by Author 2",
+    "category":"programming",
+    "content":"test article on programming"
+}
+
+### Read own articles
+GET http://localhost:4000/author-api/articles
+
+
+### Update article by author. ## check not workinh
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"69b3d8fb5e7aee86d9d8a279",
+    "title":"Article 1 by Author 1",
+    "category":"AI",
+    "content":"test article on AI and its updated"
+} 
+
+### Delete/restore article by articleId (soft delete)
+PATCH http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"69b3d8fb5e7aee86d9d8a279",
+    "isArticleActive":true
+}
+

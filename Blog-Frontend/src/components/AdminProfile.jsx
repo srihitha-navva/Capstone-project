@@ -18,7 +18,7 @@ function AdminProfile() {
     try {
       setLoading(true)
       setError(null)
-      const res = await axios.get(`${API_BASE_URL}/admin-api/users`, { 
+      const res = await axios.get(`https://capstone-project-4buv.onrender.com/admin-api/users`, { 
         withCredentials: true 
       })
       if (res.status === 200) {
@@ -37,7 +37,7 @@ function AdminProfile() {
     try {
       setUpdatingId(userId)
       const res = await axios.patch(
-        `${API_BASE_URL}/admin-api/users`,
+        `https://capstone-project-4buv.onrender.com/admin-api/users`,
         {
           userId,
           isUserActive: !currentStatus

@@ -20,6 +20,7 @@ const allowedOrigins = [
   'http://127.0.0.1:5173',
   'http://127.0.0.1:5174',
   'https://capstone-project-taupe-alpha.vercel.app',
+  'https://capstone-project-git-main-srihithanavva-6061s-projects.vercel.app'
 ]
 
 app.use(cors({
